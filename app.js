@@ -31,9 +31,6 @@ app.get('/', function (req, res) {
   res.send('Hello World!')
 });
 
-app.get('/test', function (req, res) {
-});
-
 app.get('/form', function (req, res) {
   res.render('form', {electiveData: electiveData});
 });
@@ -49,18 +46,8 @@ app.post('/form', function (req, res) {
   res.send('Hi');
 });
 
-app.get('/:something', function (req, res) {
-  // res.send(req.params.something);
-   
-  // stuffRef.set({
-  //   something: {
-  //     date: new Date(),
-  //     thing: req.params.something
-  //   }
-  // });
-})
-
 
 app.listen(process.env.PORT, process.env.IP, function () {
-  console.log(`Example app listening on port ${ process.env.PORT }!`)
+  console.log(`Example app listening on port ${ process.env.PORT }!`);
+  console.log(`Visit ${  process.env.IP }:${ process.env.PORT }`);
 })
