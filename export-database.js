@@ -4,6 +4,7 @@ const json2csv = require('json2csv');
 const serviceAccount = require('./serviceAccountKey.json');
 const fs = require('fs');
 
+
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: 'https://electives-3b8b7.firebaseio.com/'
@@ -32,7 +33,7 @@ function csvify() {
       var csv = json2csv({ data: responses, fields: fields});
       console.log(csv);
       
-      fs.writeFile('preferences.csv', csv, function(err) {
+      fs.writeFile('preferences2.csv', csv, function(err) {
         if (err) throw err;
         console.log('preferences.csv saved');
       });
@@ -50,7 +51,18 @@ function importStudentData() {
 }
 
 function buildStudents() {
+  const csv=require('csvtojson');
+  const csvFilePath='skyward-report.csv';
   
+  csv()
+  .fromFile(csvFilePath)
+  .on('json',(jsonObj)=>{
+      // combine csv header row and csv line to a json object 
+      console.log(jsonObj);
+  })
+  .on('done',(error)=>{
+    console.log('end')
+  });
 }
 
 
