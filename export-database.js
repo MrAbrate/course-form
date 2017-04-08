@@ -13,28 +13,54 @@ var db = admin.database();
 var ref = db.ref("form");
 var formResRef = ref.child("responses");
 
-console.log("Export has begun.");
-formResRef.once('value').then(function (snapshot) {
-    var data = snapshot.val();
-    var responses = Object.keys(data).reduce((prev, id) => {
-        var response = Object.assign({}, data[id]);
-        response.electives = response.electives.join(', ');
-        response.teamTime = response.teamTime.join(', ');
-        prev.push(response);
-        return prev;
-    }, []);
-    
-    
-    var fields = ['first', 'last', 'grade', 'language', 'electives', 'teamTime', 'comments'];
-    var infoFields = ['first', 'last', 'grade'];
-    
-    console.log(responses);
-    var csv = json2csv({ data: responses, fields: fields});
-    console.log(csv);
-    
-    fs.writeFile('preferences.csv', csv, function(err) {
-      if (err) throw err;
-      console.log('preferences.csv saved');
-    });
-});
+function csvify() {
+  formResRef.once('value').then(function (snapshot) {
+      var data = snapshot.val();
+      var responses = Object.keys(data).reduce((prev, id) => {
+          var response = Object.assign({}, data[id]);
+          response.electives = response.electives.join(', ');
+          response.teamTime = response.teamTime.join(', ');
+          prev.push(response);
+          return prev;
+      }, []);
+      
+      
+      var fields = ['first', 'last', 'grade', 'language', 'electives', 'teamTime', 'comments'];
+      var infoFields = ['first', 'last', 'grade'];
+      
+      console.log(responses);
+      var csv = json2csv({ data: responses, fields: fields});
+      console.log(csv);
+      
+      fs.writeFile('preferences.csv', csv, function(err) {
+        if (err) throw err;
+        console.log('preferences.csv saved');
+      });
+  });
+}
 
+function importStudentData() {
+  var studentRef = db.ref("students");
+  
+  studentRef.once('value').then(function (snapshot) {
+    var data = snapshot.val();
+    console.log(data);
+    
+  });
+}
+
+function buildStudents() {
+  
+}
+
+
+if (process.argv.indexOf('-export-student-data') !== -1) {
+   // TODO
+   // Upload the latest student data
+}
+if (process.argv.indexOf('-import-student-data') !== -1) {
+  importStudentData();
+}
+if (process.argv.indexOf('-csv') !== -1) {
+  csvify(); 
+}

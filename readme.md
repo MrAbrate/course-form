@@ -31,7 +31,9 @@ admin.initializeApp({
 
 
 ## Run the Code
-To run this project in c9.io, first make sure you have nodemon installed. In the terminal, run `npm install nodemon -g`.
+To run this project in c9.io, first open the terminal and enter `npm install`.
+
+Make sure you have nodemon installed. In the terminal, run `npm install nodemon -g`.
 
 Once you have nodemon installed, run `cd <Whatever folder name>`. Then run `nodemon app.js`. This will start the sever and give you a link to view the project. To stop the server, enter `crtl-c` in the terminal.
 
