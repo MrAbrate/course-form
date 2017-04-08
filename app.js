@@ -28,7 +28,7 @@ app.use(bodyParser.json())
 app.use(express.static(__dirname + "/public"));
 
 app.get('/', function (req, res) {
-  res.send('Hello World!')
+  res.render('form', {electiveData: electiveData});
 });
 
 
