@@ -32,3 +32,5 @@ admin.initializeApp({
 
 ## Run the Code
 To run this project in c9.io, open a terminal and run `cd <Whatever folder name>`. Then run `nodemon app.js`. This will start the sever and give you a link to view the project. To stop the server, enter `crtl-c` in the terminal.
+
+To test that everything is working, fill out the form, then look at your Firebase database. You should see the new information added to the database.

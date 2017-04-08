@@ -31,11 +31,8 @@ app.get('/', function (req, res) {
   res.send('Hello World!')
 });
 
-app.get('/form', function (req, res) {
-  res.render('form', {electiveData: electiveData});
-});
 
-app.post('/form', function (req, res) {
+app.post('/', function (req, res) {
   if (!req.body.grade || !req.body.first || !req.body.last ||
       !req.body.pFirst || !req.body.pLast || !req.body.email ||
       req.body.email !== req.body.email2) {
