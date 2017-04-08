@@ -1,0 +1,18 @@
+.modal-box(id="parent-info-modal")
+    .title Parent/Guardian Information
+    .description
+    form
+        input(type="text" id="parent-first-name" placeholder="Parent First Name")
+        input(type="text" id="parent-last-name" placeholder="Parent Last Name")
+        input(type="email" id="email" placeholder="Parent E-mail")
+        input(type="email" id="email2" placeholder="Retype Parent E-mail")
+        textarea(id="comments" rows="4" maxlength="500" placeholder="additional comments (max length 500 characters)")
+    
+    .text-center
+        .back-button Back
+        .submit-button(onclick="submitForm()") Submit
+
+.modal-box(id="confirmation")
+    .title Form Submitted
+    .description Your response has been recorded.
+    .confirmation-details

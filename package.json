@@ -1,0 +1,18 @@
+{
+  "name": "course-signup",
+  "version": "1.0.0",
+  "description": "Signup form for Village Middle School 2017-18",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marc Abrate",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "firebase-admin": "^4.2.0",
+    "json2csv": "^3.7.3",
+    "pug": "^2.0.0-beta11"
+  }
+}

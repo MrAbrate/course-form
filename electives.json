@@ -1,0 +1,22 @@
+[
+    {
+        "grade": 5,
+        "courseNames": ["Newspaper", "Speech", "Robotics", "Art", "Drama"],
+        "descriptionLink": "https://drive.google.com/open?id=0B4D5CPihMMwibkRybGh1ZDNPRnc"
+    },
+    {
+        "grade": 6,
+        "courseNames": ["Speech/Debate", "Robotics", "Art", "Drama", "Contest Math"],
+        "descriptionLink": "https://drive.google.com/open?id=0B4D5CPihMMwiXzVnMWRtR1R6ak0"
+    },
+    {
+        "grade": 7,
+        "courseNames": ["Speech/Debate", "Robotics", "Art", "Drama", "Contest Math", "Quiz Bowl", "A Study of Star Wars", "Computer Programming", "World Geography"],
+        "descriptionLink": "https://drive.google.com/open?id=0B4D5CPihMMwiT25iYVZDR0NraEk"
+    },
+    {
+        "grade": 8,
+        "courseNames": ["Speech/Debate", "Robotics", "Art", "Drama", "Contest Math", "Quiz Bowl", "A Study of Star Wars", "Computer Programming", "Yearbook", "World Geography"],
+        "descriptionLink": "https://drive.google.com/open?id=0B4D5CPihMMwiODZsNnZyT29JYVk"
+    }
+]

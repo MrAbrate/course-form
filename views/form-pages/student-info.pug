@@ -1,0 +1,68 @@
+.modal-box.show(id="student-info-modal")
+    h1.title VMS Course Selection Form
+    .description
+    
+    input(type="text" id="first-name" placeholder="Student First Name")
+    input(type="text" id="last-name" placeholder="Student Last Name")
+    input(type="text" id="english-name" placeholder="English Name or Nickname")
+    
+    .radio-group
+        h2.text-center Grade
+        .flex-center(id="grade-picker")
+            input(type="radio" name="grade" value="5" id="grade-5")
+            label(for="grade-5") 5th
+            input(type="radio" name="grade" value="6" id="grade-6")
+            label(for="grade-6") 6th
+            input(type="radio" name="grade" value="7" id="grade-7")
+            label(for="grade-7") 7th
+            input(type="radio" name="grade" value="8" id="grade-8")
+            label(for="grade-8") 8th
+    
+    
+    .form-group
+        label(for="house") What house are you in?
+        select(id="house")
+            option I don't know yet
+            option I don't remember
+            option Dragon
+            option Odin
+            option Thor
+            option Skald
+            option Valhalla
+            option Valkyrie
+            option Vor
+    
+    
+    .form-group
+        label(for="tshirt") T-Shirt Size
+        select(id="tshirt")
+            option Child S
+            option Child M
+            option Child L
+            option Child XL
+            option Adult S
+            option Adult M
+            option Adult L
+            option Adult XL
+            option Adult 2XL
+            option Adult 3XL
+    
+    h2.text-center Foreign Language
+    p.text-center Remember, if you are a returning student you 
+        strong must 
+        | choose the language you took last year. If you are new to the middle school, choose carefully. This will be your language through 8th grade.
+    
+    .radio-group
+        .flex-center(id="lang-picker")
+            input(type="radio" name="foreign-lang" value="French" id="french")
+            label(for="french") French
+            input(type="radio" name="foreign-lang" value="Spanish" id="spanish")
+            label(for="spanish") Spanish
+            input(type="radio" name="foreign-lang" value="ELL" id="ell")
+            label(for="ell" title="English Language Learner") ELL
+    
+    
+    .text-center
+        .button(onclick="submitStudentInfo()") Next
+ 
+

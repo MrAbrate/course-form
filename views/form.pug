@@ -1,0 +1,32 @@
+//- index.pug
+doctype html
+html
+    head
+        link(rel="stylesheet" href="/css/style.css")
+
+    body
+        .modal-wrapper
+            .modal-header
+                span.active
+                span
+                span
+                span
+                span
+                
+            .modal-boxes
+                include form-pages/student-info.pug
+                include form-pages/music.pug
+                include form-pages/electives.pug
+                include form-pages/teamtime.pug
+                include form-pages/submit.pug
+
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js")
+        script(src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js")
+        
+        script(src="js/new/main.js")
+        
+        
+        // script(src="js/setup.js")
+        // script(src="js/functions.js")
+        // script(src="js/steps.js")
+        // script(src="js/main.js")
